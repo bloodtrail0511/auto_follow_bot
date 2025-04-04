@@ -1,0 +1,20 @@
+close all;clear;
+A = -0.45757944;
+B = -0.66208211;
+C = -0.49256372;
+D = -0.08151948;
+E = 0.00280419;
+F = -0.00992116;
+G = 0.22821187;
+H = 0.18695267;
+I = -0.0850303;
+J = 0.09292728;
+Q = [A, D, E;
+    D, B, F;
+    E, F, C];
+p = [G; H; I];
+offset = -0.5*(Q^-1)*p;
+% d = diag(Q);
+[R, d] = eig(Q);
+R*d*transpose(R)
+ss = transpose(offset)*Q*offset;
