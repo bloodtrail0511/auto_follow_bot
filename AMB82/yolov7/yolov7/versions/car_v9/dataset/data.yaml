@@ -1,0 +1,13 @@
+train: car_v9\dataset\train\images
+val: car_v9\dataset\valid\images
+test: car_v9\dataset\test\images
+
+nc: 1
+names: ['car_img']
+
+roboflow:
+  workspace: project-isox5
+  project: car_v7
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project-isox5/car_v7/dataset/4
